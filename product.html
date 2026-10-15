@@ -5,97 +5,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Our Fragrance | NOIRÉ</title>
-
+    <meta name="description" content="Explore the NOIRÉ signature fragrance.">
+    <title>The Fragrance | NOIRÉ</title>
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="index.html" class="logo">NOIRÉ</a>
+    <header class="site-header">
+        <a class="logo" href="index.html">NOIRÉ<span>.</span></a>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Our Fragrance</a></li>
-            <li><a href="index.html#story">Our Story</a></li>
-            <li><a href="order.html" class="btn">Shop Now</a></li>
-        </ul>
-    </nav>
+        <button class="menu-toggle" type="button"
+                aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span>
+        </button>
 
-    <!-- Product Details -->
-    <section class="product-detail">
-
-        <img
-            src="assets/noire-product.jpg"
-            alt="NOIRÉ luxury perfume bottle"
-        >
-
-        <div class="product-info">
-
-            <p>THE SIGNATURE COLLECTION</p>
-
-            <h1>NOIRÉ Eau de Parfum</h1>
-
-            <p class="price">PKR 4,500</p>
-
-            <p>
-                Discover a fragrance that leaves a lasting impression.
-                NOIRÉ blends warmth, elegance and mystery into one
-                unforgettable scent.
-            </p>
-
-            <h3>Fragrance Notes</h3>
-
-            <p><strong>Top Notes:</strong> Bergamot and fresh citrus</p>
-
-            <p><strong>Heart Notes:</strong> Rose and warm spices</p>
-
-            <p><strong>Base Notes:</strong> Amber, musk and vanilla</p>
-
-            <h3>Product Details</h3>
-
-            <p><strong>Brand:</strong> NOIRÉ</p>
-
-            <p><strong>Type:</strong> Eau de Parfum</p>
-
-            <p><strong>Size:</strong> 50 ml</p>
-
-            <p><strong>Style:</strong> Warm and elegant</p>
-
-            <a href="order.html" class="btn">Order Now</a>
-
-        </div>
-    </section>
-
-    <!-- Closing Section -->
-    <section class="cta">
-
-        <h2>A Scent That Speaks for You.</h2>
-
-        <p>
-            Make every moment memorable with NOIRÉ.
-        </p>
-
-        <a href="order.html" class="btn">
-            Shop the Fragrance
-        </a>
-
-    </section>
-
-    <!-- Footer -->
-    <footer>
-
-        <p>© 2026 NOIRÉ. The Art of Fragrance.</p>
-
-        <p>
-            <a href="index.html">Home</a> |
-            <a href="product.html">Fragrance</a> |
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a class="active" href="product.html">The Fragrance</a>
             <a href="order.html">Order</a>
-        </p>
+        </nav>
+
+        <a class="header-cta" href="order.html">Shop Now <span>↗</span></a>
+    </header>
+
+    <main>
+        <section class="page-heading section-wrap">
+            <p class="eyebrow">THE SIGNATURE COLLECTION</p>
+            <h1>Meet your new<br><em>signature.</em></h1>
+            <p>Thoughtful design. Understated character. NOIRÉ.</p>
+        </section>
+
+        <section class="product-showcase section-wrap">
+            <div class="product-image product-image-frame">
+                <img
+                    src="assets/noire-product.jpg"
+                    alt="NOIRÉ signature perfume bottle"
+                    class="product-perfume-img">
+                <span class="image-index">NOIRÉ / 001</span>
+            </div>
+
+            <div class="product-information">
+                <p class="eyebrow">EAU DE PARFUM</p>
+                <h2>NOIRÉ <em>Signature</em></h2>
+                <p class="product-subtitle">An expression of quiet confidence.</p>
+
+                <p class="product-price">PKR 4,500 <span> / 50 ml</span></p>
+
+                <div class="product-divider"></div>
+
+                <p class="product-description">
+                    Created for the moments that stay with you, NOIRÉ
+                    brings together a minimal, modern identity and an
+                    elegant fragrance presentation. Its understated
+                    character makes it a considered addition to your
+                    daily ritual or a thoughtful gift.
+                </p>
+
+                <div class="product-facts">
+                    <div>
+                        <span class="fact-label">COLLECTION</span>
+                        <span class="fact-value">Signature</span>
+                    </div>
+                    <div>
+                        <span class="fact-label">FORMAT</span>
+                        <span class="fact-value">Eau de Parfum</span>
+                    </div>
+                    <div>
+                        <span class="fact-label">STYLE</span>
+                        <span class="fact-value">Modern & refined</span>
+                    </div>
+                </div>
+
+                <div class="size-selector">
+                    <p class="fact-label">CHOOSE YOUR SIZE</p>
+                    <label class="size-option">
+                        <input type="radio" name="display-size"
+                               value="50" checked>
+                        <span>50 ml</span>
+                        <strong>PKR 4,500</strong>
+                    </label>
+                    <label class="size-option">
+                        <input type="radio" name="display-size"
+                               value="100">
+                        <span>100 ml</span>
+                        <strong>PKR 7,500</strong>
+                    </label>
+                </div>
+
+                <a class="button button-dark button-full"
+                   id="product-order-link" href="order.html?size=50">
+                    Order your fragrance <span>↗</span>
+                </a>
+
+                <p class="demo-note">
+                    This is a student website concept. Product details
+                    and prices are illustrative.
+                </p>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="section-wrap">
+                <p class="eyebrow">THE NOIRÉ PHILOSOPHY</p>
+                <h2>Less noise. <em>More meaning.</em></h2>
+
+                <div class="values-grid">
+                    <article class="value-card">
+                        <span class="value-number">01</span>
+                        <h3>Understated</h3>
+                        <p>A minimal identity built around quiet confidence.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="value-number">02</span>
+                        <h3>Considered</h3>
+                        <p>Every visual detail has a place and a purpose.</p>
+                    </article>
+                    <article class="value-card">
+                        <span class="value-number">03</span>
+                        <h3>Personal</h3>
+                        <p>A signature fragrance concept for your own ritual.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="closing-banner">
+            <p class="eyebrow">READY TO MAKE IT YOURS?</p>
+            <h2>Your signature <em>awaits.</em></h2>
+            <p>Continue to the order page to review your selection.</p>
+            <a class="button button-light" href="order.html">
+                Continue to order <span>↗</span>
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo footer-logo" href="index.html">NOIRÉ<span>.</span></a>
+        <p>Quiet luxury. Lasting impression.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Fragrance</a>
+            <a href="order.html">Order</a>
+        </div>
+        <p class="copyright">© 2026 NOIRÉ. Student project concept.</p>
 
     </footer>
 

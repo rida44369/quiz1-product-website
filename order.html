@@ -1,0 +1,304 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Place a demo order for NOIRÉ fragrance.">
+    <title>Place an Order | NOIRÉ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="logo" href="index.html">NOIRÉ<span>.</span></a>
+
+        <button class="menu-toggle" type="button"
+                aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span>
+        </button>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="product.html">The Fragrance</a>
+            <a class="active" href="order.html">Order</a>
+        </nav>
+
+        <a class="header-cta" href="product.html">View Product <span>↗</span></a>
+    </header>
+
+    <main>
+        <section class="page-heading order-heading section-wrap">
+            <p class="eyebrow">A FEW DETAILS, THEN IT'S YOURS</p>
+            <h1>Make it <em>yours.</em></h1>
+            <p>Review your selection and complete the demo order form below.</p>
+        </section>
+
+        <section class="checkout-layout section-wrap">
+            <form id="order-form" class="checkout-form">
+                <div class="form-section">
+                    <div class="form-section-heading">
+                        <span class="step-number">01</span>
+                        <div>
+                            <h2>Contact information</h2>
+                            <p>How can we identify your order?</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field field-full">
+                            <label for="full-name">Full name *</label>
+                            <input id="full-name" name="fullName" type="text"
+                                   autocomplete="name" required
+                                   placeholder="Your full name">
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email address *</label>
+                            <input id="email" name="email" type="email"
+                                   autocomplete="email" required
+                                   placeholder="you@example.com">
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone number *</label>
+                            <input id="phone" name="phone" type="tel"
+                                   autocomplete="tel" required
+                                   placeholder="+92 3XX XXXXXXX">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-heading">
+                        <span class="step-number">02</span>
+                        <div>
+                            <h2>Delivery details</h2>
+                            <p>Where should your fragrance go?</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field field-full">
+                            <label for="address">Street address *</label>
+                            <input id="address" name="address" type="text"
+                                   autocomplete="street-address" required
+                                   placeholder="House number, street and area">
+                        </div>
+
+                        <div class="field">
+                            <label for="city">City *</label>
+                            <input id="city" name="city" type="text"
+                                   autocomplete="address-level2" required
+                                   placeholder="Your city">
+                        </div>
+
+                        <div class="field">
+                            <label for="province">Province / region *</label>
+                            <select id="province" name="province" required>
+                                <option value="">Select province</option>
+                                <option>Punjab</option>
+                                <option>Sindh</option>
+                                <option>Khyber Pakhtunkhwa</option>
+                                <option>Balochistan</option>
+                                <option>Islamabad Capital Territory</option>
+                                <option>Gilgit-Baltistan</option>
+                                <option>Azad Jammu and Kashmir</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="postal-code">Postal code</label>
+                            <input id="postal-code" name="postalCode"
+                                   type="text" autocomplete="postal-code"
+                                   placeholder="Optional">
+                        </div>
+
+                        <div class="field">
+                            <label for="country">Country</label>
+                            <input id="country" name="country" type="text"
+                                   value="Pakistan" readonly>
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="instructions">Delivery instructions</label>
+                            <textarea id="instructions" name="instructions"
+                                      rows="3"
+                                      placeholder="Landmark or other helpful details (optional)"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-heading">
+                        <span class="step-number">03</span>
+                        <div>
+                            <h2>Your fragrance</h2>
+                            <p>Choose the size and quantity you prefer.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="product-size">Bottle size *</label>
+                            <select id="product-size" name="productSize" required>
+                                <option value="50">50 ml — PKR 4,500</option>
+                                <option value="100">100 ml — PKR 7,500</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="quantity">Quantity *</label>
+                            <select id="quantity" name="quantity" required>
+                                <option value="1">1 bottle</option>
+                                <option value="2">2 bottles</option>
+                                <option value="3">3 bottles</option>
+                                <option value="4">4 bottles</option>
+                                <option value="5">5 bottles</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label class="check-option gift-option">
+                        <input id="gift-wrap" name="giftWrap" type="checkbox">
+                        <span>
+                            <strong>Add gift wrapping</strong>
+                            <small>Premium gift presentation — PKR 300</small>
+                        </span>
+                    </label>
+
+                    <div class="field gift-message-field" id="gift-message-field" hidden>
+                        <label for="gift-message">Gift message</label>
+                        <textarea id="gift-message" name="giftMessage" rows="3"
+                                  placeholder="Write a short message (optional)"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-heading">
+                        <span class="step-number">04</span>
+                        <div>
+                            <h2>Delivery & payment</h2>
+                            <p>Select your preferred options.</p>
+                        </div>
+                    </div>
+
+                    <div class="option-stack">
+                        <label class="check-option delivery-option">
+                            <input type="radio" name="delivery" value="standard"
+                                   data-cost="200" checked>
+                            <span>
+                                <strong>Standard delivery</strong>
+                                <small>Delivery fee — PKR 200</small>
+                            </span>
+                        </label>
+
+                        <label class="check-option delivery-option">
+                            <input type="radio" name="delivery" value="express"
+                                   data-cost="400">
+                            <span>
+                                <strong>Express delivery</strong>
+                                <small>Delivery fee — PKR 400</small>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="field payment-field">
+                        <label for="payment">Payment preference *</label>
+                        <select id="payment" name="payment" required>
+                            <option value="cod">Cash on delivery (demo)</option>
+                            <option value="bank">Bank transfer (demo only)</option>
+                            <option value="online">Online payment (demo only)</option>
+                        </select>
+                        <p class="field-help">
+                            No payment is collected by this demonstration website.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-section terms-section">
+                    <label class="check-option">
+                        <input id="terms" name="terms" type="checkbox" required>
+                        <span>
+                            I have reviewed my details and understand that
+                            this is a demo order form. *
+                        </span>
+                    </label>
+
+                    <button class="button button-dark button-full" type="submit">
+                        Review demo order <span>↗</span>
+                    </button>
+
+                    <p class="form-disclaimer">
+                        This form does not send your information to a server,
+                        place a real order or process a payment.
+                    </p>
+
+                    <div id="order-feedback" class="order-feedback"
+                         role="status" aria-live="polite" hidden></div>
+                </div>
+            </form>
+
+            <aside class="order-summary">
+                <p class="eyebrow">YOUR SELECTION</p>
+                <h2>Order summary</h2>
+
+                <div class="summary-image">
+                    <img src="assets/noire-product.jpg"
+                         alt="NOIRÉ perfume bottle">
+                </div>
+
+                <div class="summary-product">
+                    <div>
+                        <h3>NOIRÉ Signature</h3>
+                        <p id="summary-size">50 ml · Eau de Parfum</p>
+                    </div>
+                    <span id="summary-price">PKR 4,500</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Quantity</span>
+                    <span id="summary-quantity">1</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Gift wrapping</span>
+                    <span id="summary-gift">PKR 0</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Delivery</span>
+                    <span id="summary-delivery">PKR 200</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong id="summary-total">PKR 4,700</strong>
+                </div>
+
+                <p class="summary-note">
+                    Prices shown are illustrative for this student project.
+                </p>
+
+                <a class="summary-back-link" href="product.html">
+                    ← Back to product details
+                </a>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="logo footer-logo" href="index.html">NOIRÉ<span>.</span></a>
+        <p>Quiet luxury. Lasting impression.</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Fragrance</a>
+            <a href="order.html">Order</a>
+        </div>
+        <p class="copyright">© 2026 NOIRÉ. Student project concept.</p>
+    </footer>
+
+</body>
+</html>
+```
